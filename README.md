@@ -7,3 +7,11 @@
     //Quando criar uma classe nova?
     //Quando ver que a classe está não sendo coesa
     //Está fazendo mais do que seu proposito
+
+    //this. - para se referir ao objeto instanciado, nesse caso não tem shadowing
+    //quando tem shadowing quando tem variavel local
+    //nesse caso, na função (metodo) não tem variavel local
+
+
+
+
