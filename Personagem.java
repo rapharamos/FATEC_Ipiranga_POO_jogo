@@ -41,7 +41,9 @@ public class Personagem {
             this.sono -= 1;
             this.energia = this.energia + 1 <=10 ? this.energia +1 : this.energia;
         }
-        
+        else{
+            System.out.println(nome + "sem sono...");
+        }
     }
 
     //classe de alta coesao - resolve somente um problema
