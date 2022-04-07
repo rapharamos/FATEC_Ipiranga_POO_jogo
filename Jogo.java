@@ -1,7 +1,9 @@
 import java.util.Random;
 public class Jogo {
     public static void main(String[] args) throws Exception {
-        Personagem cacador = new Personagem(); //criacao de objeto com variavel de referencia (cacador)
+        Personagem cacador = new Personagem(10, 0, 0); //criacao de objeto com variavel de referencia (cacador)
+        Personagem soneca = new Personagem(2, 4, 10);
+        Personagem guloso = new Personagem(4, 10, 2);
         cacador.setNome("Cacador");
         Random gerador = new Random();
         while(true){
@@ -9,6 +11,8 @@ public class Jogo {
             switch(oQueFazer){
                 case 1:
                     cacador.cacar();
+                    soneca.cacar();
+                    guloso.cacar();
                     break;
                 case 2:
                     cacador.comer();

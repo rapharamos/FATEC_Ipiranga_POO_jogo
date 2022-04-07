@@ -1,14 +1,20 @@
 public class Personagem {
     private String nome; //variavel de instancia e referencia
     private int energia = 10; //variaveis de instancia e primitivas
-    private int fome = 0;
-    private int sono = 0;
+    private int fome = 0; //mas, int ja nasce 0, java ja faz para todas var e bool false nao precisa inicializar
+    private int sono = 0; //colocar mais por documentacao //ah nao ser as variaveis locais de metodos, main, int ou voids...
 
     private final static int LIMITE_SUPERIOR = 10; //constante, não da pra trocar esse valor, final quer dizer que nao pode atribuir
     //coloque o static para nao puxar essa memo pra cada objeto
     //static significa é dessa classe, não crie varias para cada objeto, instancias
     //valor compartilhado pra todas as instancias, uma copia para todos os objetos
     //para atribuir pode Personagem.constante = .. porque é da classe e nao das instancias
+
+    public Personagem(int energia, int fome, int sono) {
+        if(energia >= 0 && energia <=10) this.energia = energia;
+        if(fome >= 0 && fome <= 10) this.fome = fome;
+        if(sono >= 0 && sono <= 10) this.sono = sono;
+    }
 
     public void setNome(String nome){
         this.nome = nome;
